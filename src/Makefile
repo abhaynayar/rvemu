@@ -1,7 +1,7 @@
-all: crvemu
+all: rvemu
 
-crvemu: main.o cpu.o
-	g++ -o crvemu main.o cpu.o
+rvemu: main.o cpu.o memory.o bus.o
+	g++ -o rvemu main.o cpu.o memory.o bus.o
 
 main.o: main.cc
 	g++ -c main.cc
@@ -9,5 +9,12 @@ main.o: main.cc
 cpu.o: cpu.cc
 	g++ -c cpu.cc
 
+bus.o: bus.cc
+	g++ -c bus.cc
+
+memory.o: memory.cc
+	g++ -c memory.cc
+
 clean:
-	rm *.o crvemu
+	rm *.o rvemu
+

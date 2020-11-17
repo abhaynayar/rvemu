@@ -12,7 +12,7 @@ main:
 	sd	ra,8(sp)
 	sd	s0,0(sp)
 	addi	s0,sp,16
-	li	a0,11
+	li	a0,10
 	call	fib
 	mv	a5,a0
 	mv	a0,a5
