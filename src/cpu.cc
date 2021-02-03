@@ -32,11 +32,7 @@ void Cpu::dump() {
 
 // Initialize the Cpu
 Cpu::Cpu(std::vector<uint8_t> binary): bus(binary) {
-    
-    for (int i=0; i<32; ++i) {
-        reg[i] = 0;
-    }
-    
+    for (int i=0; i<32; ++i) reg[i] = 0;
     reg[2] = MEMORY_BASE + MEMORY_SIZE; // Stack pointer
     pc = MEMORY_BASE; // Instructions start at this address
     return;

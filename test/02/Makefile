@@ -5,4 +5,5 @@ fib.bin: fib.c
 
 clean:
 	rm -f fib
+	rm -f fib.s
 	rm -f fib.bin

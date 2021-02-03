@@ -34,10 +34,8 @@ int main(int argc, char* argv[]) {
     do {
         inst = cpu.fetch();
         cpu.execute(inst);
-        printf("%x ", inst);
         cpu.dump();
-        //std::cin.get();
     } while(inst != 0);
+    
     return 0;
 }
-

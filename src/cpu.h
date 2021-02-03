@@ -9,6 +9,7 @@
 class Cpu {
     uint64_t pc;
     uint64_t reg[32];
+    uint64_t csrs[4096];
     Bus bus;
 
 public:
